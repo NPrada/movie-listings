@@ -1,0 +1,16 @@
+.movie-card{
+  //this is necessary because flex does not respect margins
+  $margin: 10px;
+  margin: $margin;
+  height: calc(100px + calc(#{$margin} * 2));
+  width: calc(150px + calc(#{$margin} * 2));
+  
+  border: 1px solid red;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
+  &__title{ 
+    font-size: 15px;
+  }
+}
