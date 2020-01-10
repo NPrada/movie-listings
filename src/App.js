@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-  
+        
         <MoviesList movieData={movieData.results}/>
     </div>
   );

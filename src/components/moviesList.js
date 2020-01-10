@@ -1,5 +1,4 @@
 import React from 'react'
-import './moviesList.scss'
 import MovieCard from './movieCard'
 import PropTypes from 'prop-types'
 
@@ -20,6 +19,8 @@ export default function MoviesList(props){
         <MovieCard
           key={movie.id}
           title={movie.title}
+          rating={movie.vote_average}
+          imageUrl={movie.poster_path}
         />
       )
     }

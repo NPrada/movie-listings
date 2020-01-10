@@ -1,12 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './movieCard.scss'
 
 export default function MovieCard(props){
+
+  const {title, rating, imageUrl} = props
+
+  const imgCDNUrlHighQuality = 'https://image.tmdb.org/t/p/w600_and_h900_bestv2';
+  const imgCDNUrlLowQuality = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2';
+
   return(
     <div className={'movie-card'}>
-
-        <h1 className="movie-card__title">{props.title}</h1>
+        <img className={'movie-card__poster'} src={imgCDNUrlLowQuality + imageUrl} alt={'movie-poster'}/>
+        <div className={'movie-card__details'}>
+          <h1 className="movie-card__details__title">{title}</h1>
+          <div className={"movie-card__details__rating"}>
+          <img className={'movie-card__details__rating__icon'} src={process.env.PUBLIC_URL+"/assets/star.svg"} alt={'rating-icon'}/>
+            <div className={'movie-card__details__rating__text'}>{rating}</div>
+          </div>
+        </div>
 
     </div>
   )

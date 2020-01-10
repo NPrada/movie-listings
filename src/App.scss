@@ -1,3 +1,14 @@
-.App {
-
+@mixin isMobileWidth(){
+  @media only screen and (max-width: 768px) {
+    @content
+  }
 }
+
+// color constants
+$primaryBackgroundColor: black;
+$secondaryBackgroundColor: rgb(41, 40, 40);
+$primaryTextColor: white;
+
+
+@import './components/movieCard.scss';
+@import './components//moviesList.scss';
