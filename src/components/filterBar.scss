@@ -1,0 +1,27 @@
+.filter-bar{
+  width: 100vw; //this instead of 100% otherwise the contents change position when the scrollbar is present
+  height: 60px;
+  background-color: $secondaryBackgroundColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__label{
+    color: $primaryTextColor;
+    width: 40px;
+    text-align: center;
+  }
+
+  &__input{
+    position: relative;
+    border: 0;
+    padding: 0;
+    background-color: red;
+    height: 20px;
+    width: 200px;
+    border-radius: 30px;
+    margin: 5px;
+  }
+
+}

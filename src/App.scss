@@ -11,4 +11,9 @@ $primaryTextColor: white;
 
 
 @import './components/movieCard.scss';
-@import './components//moviesList.scss';
+@import './components/moviesList.scss';
+@import './components/filterBar.scss';
+
+.App{
+  background-color: $primaryBackgroundColor;
+}

@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.scss';
 import { getNewMovies } from './utilities/apiClient'
 import MoviesList from './components/moviesList'
-
+import FilterBar from './components/filterBar'
 
 function App() {
   /*
@@ -12,6 +12,7 @@ function App() {
     Which means two rerenders and lower performance
   */
   const [movieData, setMovieData] = React.useState({isLoading: true}) 
+  const [filterValue, setFilter] = React.useState(0) //I hadle the filter state here because it needs to be passed into the movieList component
 
   React.useEffect(() => {
 
@@ -19,13 +20,11 @@ function App() {
       setMovieData(state => ({...state, ...data, isLoading: false}))
     },(error) => console.log("Error", error))
   }, []);
-  
-  console.log(movieData)
 
   return (
     <div className="App">
-        
-        <MoviesList movieData={movieData.results}/>
+        <FilterBar filterValue={filterValue} onSelectionHandler={setFilter}/>
+        <MoviesList movieData={movieData.results} minRating={filterValue/2}/>
     </div>
   );
 }

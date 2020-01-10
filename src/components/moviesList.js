@@ -12,8 +12,6 @@ export default function MoviesList(props){
   const cardsToRender = []
 
   movieData.forEach((movie) => {
-    console.log(movie)
-
     if(movie.vote_average >= minRating){
       cardsToRender.push(
         <MovieCard
