@@ -14,7 +14,7 @@ export default function MovieCard(props){
         <div className={'movie-card__details'}>
           <h1 className="movie-card__details__title">{title}</h1>
           <div className={"movie-card__details__rating"}>
-          <img className={'movie-card__details__rating__icon'} src={process.env.PUBLIC_URL+"/assets/star.svg"} alt={'rating-icon'}/>
+          <img className={'movie-card__details__rating__icon'} src={process.env.PUBLIC_URL+"/assets/star.svg"} alt={'rating-star-icon'}/>
             <div className={'movie-card__details__rating__text'}>{rating}</div>
           </div>
         </div>
