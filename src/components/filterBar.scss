@@ -8,17 +8,42 @@
   align-items: center;
 
   &__label{
+    position: relative;
     color: $primaryTextColor;
-    width: 40px;
+    font-size: 14px;
+    width: 200px;
+    padding-bottom: 5px;
     text-align: center;
   }
 
+  &__input {
+    -webkit-appearance: none;
+    height: 2px;
+    border-radius: 5px;
+    background: $range-track-color;
+    outline: none;
+    padding: 0;
+    margin: 0;
+
+    // Range Handle
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $range-handle-color;
+      cursor: pointer;
+      transition: background .15s ease-in-out;
+
+      &:hover {
+        background: $range-handle-color-hover;
+      }
+    }
+  }
+
   &__input{
-    position: relative;
     border: 0;
     padding: 0;
-    background-color: red;
-    height: 20px;
     width: 200px;
     border-radius: 30px;
     margin: 5px;

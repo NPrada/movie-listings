@@ -13,7 +13,7 @@ export default function FilterBar(props){
   console.log('render', props.filterValue)
   return(
     <div className={'filter-bar'}>
-    <div className="filter-bar__label">{props.filterValue/2}</div>
+    <div className="filter-bar__label"><span>Minimum Rating:</span><span>{props.filterValue/2}</span></div>
     <input className={'filter-bar__input'} 
       type='range' 
       min='0' 

@@ -8,12 +8,15 @@
 $primaryBackgroundColor: black;
 $secondaryBackgroundColor: rgb(41, 40, 40);
 $primaryTextColor: white;
+$range-handle-color: #3B8686;
+$range-handle-color-hover: lighten( $range-handle-color, 10% );
+$range-track-color: lighten($secondaryBackgroundColor, 10%);
 
 
 @import './components/movieCard.scss';
 @import './components/moviesList.scss';
 @import './components/filterBar.scss';
 
-.App{
+body{
   background-color: $primaryBackgroundColor;
 }
