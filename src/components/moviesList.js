@@ -10,7 +10,7 @@ export default function MoviesList(props){
   } = props;
 
   const cardsToRender = []
-
+  movieData.sort((a,b) => a.vote_average-b.vote_average).reverse() //sort the movies by rating
   movieData.forEach((movie) => {
     if(movie.vote_average >= minRating){
       cardsToRender.push(
